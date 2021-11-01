@@ -1,0 +1,11 @@
+name: Elso workflow
+
+on: #mikor legyen a worflow vegrehajtva
+  push
+
+jobs:
+  build: #neve a jobnak
+    runs-on: ubuntu-latest #milyen virtual kornyezetben futtassuk
+    steps: #lista a vegrehajtando lepesekrol
+      - uses: actions/checkout@v2 #szedje le a kodot gitrol
+      - run: g++ -Wall main.cpp #forditsa le a kodot
