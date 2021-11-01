@@ -10,3 +10,4 @@ jobs:
       - uses: actions/checkout@v2 #szedje le a kodot gitrol
       - run: g++ -Wall main.cpp #forditsa le a kodot
       - run: ./run_test.sh
+      - run: diff output.txt good_output.txt
