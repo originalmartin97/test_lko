@@ -9,4 +9,4 @@ jobs:
     steps: #lista a vegrehajtando lepesekrol
       - uses: actions/checkout@v2 #szedje le a kodot gitrol
       - run: g++ -Wall main.cpp #forditsa le a kodot
-      - run: IFS=$'\n'; for i in `cat input.txt`; do echo "Szamok: $i, lko:"; echo "$i" | ./a.out ; done
+      - run: ./run_test.sh
