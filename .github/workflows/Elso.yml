@@ -9,16 +9,16 @@ jobs:
     steps: #lista a vegrehajtando lepesekrol
       - uses: actions/checkout@v2 #szedje le a kodot gitrol
       - name: Build the application
-      - run: g++ -Wall main.cpp -o gcd #forditsa le a kodot
+        run: g++ -Wall main.cpp -o gcd #forditsa le a kodot
       - name: Upload binary
         uses: actions/upload-artifact@v2
         with:
           name: application
           path: gcd
       - name: Run input-output tests
-      - run: ./run_test.sh gcd generated_output.txt
+        run: ./run_test.sh gcd generated_output.txt
       - name: Check result of input-output tests
-      - run: diff generated_output.txt good_output.txt
+        run: diff generated_output.txt good_output.txt
       - name: Upload generated output
         uses: actions/upload-artifact@v2
         with:
