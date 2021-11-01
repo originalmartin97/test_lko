@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest #milyen virtual kornyezetben futtassuk
     steps: #lista a vegrehajtando lepesekrol
       - uses: actions/checkout@v2 #szedje le a kodot gitrol
-      - run: g++ -Wall main.cpp #forditsa le a kodot
-      - run: ./run_test.sh
-      - run: diff output.txt good_output.txt
+      - run: g++ -Wall main.cpp -o gcd #forditsa le a kodot
+      - run: ./run_test.sh gcd generated_output.txt
+      - run: diff generated_output.txt good_output.txt
