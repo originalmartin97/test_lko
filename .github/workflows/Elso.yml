@@ -4,7 +4,7 @@ on: #mikor legyen a worflow vegrehajtva
   push
 
 jobs:
-  build: #neve a jobnak
+  build_and_test: #neve a jobnak
     runs-on: ubuntu-latest #milyen virtual kornyezetben futtassuk
     steps: #lista a vegrehajtando lepesekrol
       - uses: actions/checkout@v2 #szedje le a kodot gitrol
